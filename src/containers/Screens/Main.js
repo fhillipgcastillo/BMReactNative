@@ -8,14 +8,26 @@ export default class MainScreen extends React.Component {
   static navigationOptions = {
     title: 'Administra Tu Negocio'
   };
+  static defaultProps = {
+    activeTab: 'home'
+  };
+  constructor(props){
+    super(props);
+    this.handleTabSelect = this.handleTabSelect.bind(this);
+  }
+  handleTabSelect = () => {
+    console.log('tab selected');
+  };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-        <TabsContainer navigate={navigate} />
+        <TabsContainer 
+        styles={{marginTop:50,backgroundColor:'black'}}
+          onTabSelect={this.handleTabSelect} 
+          navigate={navigate} 
+          activeTab={this.props.activeTab}
+        />
       </View>
     );
   }

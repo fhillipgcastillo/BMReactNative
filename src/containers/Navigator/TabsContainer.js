@@ -5,7 +5,10 @@ import Tabs from '~/components/Tabs/Tabs';
 export default class TabsContainer extends Component {
   render(){
     return (
-      <Tabs />
+      <Tabs 
+        onTabSelect={this.props.onTabSelect} 
+        navigator={this.props.navigator} 
+        activeTab={this.props.activeTab} />
     )
   }
 }
