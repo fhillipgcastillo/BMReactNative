@@ -1,10 +1,13 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
   DrawerLayoutAndroid
 } from 'react-native';
 import Drawer from './Drawer';
+import Sample from '~/containers/Sample/Sample';
+
 
 export default class Tab extends Component{
   static defaultProps = {
@@ -13,28 +16,28 @@ export default class Tab extends Component{
   render(){
     const closeDrawer = () => this.drawer.closeDrawer();
     const openDrawer = () => this.drawer.openDrawer();
+    console.log("Tabs", this.props);
     return (
-      <DrawerLayoutAndroid
-        drawerWidth={300}
-        renderNavigationView={ () => {
+      <DrawerLayoutAndroid 
+        ref={(drawer)=> this.drawer = drawer}
+        drawerWidth={290}
+        renderNavigationView={()=>(
           <Drawer 
-            ref={(drawer)=> this.drawer = drawer}
-            activeTab={this.props.activeTab}
-            onSelectTab={this.props.onTabSelect}
-            close={closeDrawer}
-          />
-        }}
+            activeFooterTab={this.props.activeFooterTab}
+            onSelectTab={this.props.onSelectTab}
+            close={closeDrawer}/>
+    	  )}
       >
         {this.props.activeTab === 'home'
-    			? <Text onPress={openDrawer}>Home</Text>/*<HomeContainer openDrawer={openDrawer} navigator={props.navigator} />*/
-    			: <Text>Another</Text>/*<LeaderboardContainer openDrawer={openDrawer} navigator={props.navigator} />*/ }
+    			? <Sample navigate={this.props.navigate} />/*<HomeContainer openDrawer={openDrawer} navigate={props.navigate} />*/
+    			: <Text>Another</Text>/*<LeaderboardContainer openDrawer={openDrawer} navigate={props.navigate} />*/ }
       </DrawerLayoutAndroid>
     )
   }
 };
 
-// Tab.propTypes = {
-//   activeTab: PropTypes.string.isRequired,
-//   navigator: PropTypes.func.isRequired,
-//   onSelectTab: PropTypes.func.isRequired
-// };
+Tab.propTypes = {
+  activeTab: PropTypes.string.isRequired,
+  navigate: PropTypes.func.isRequired,
+  onSelectTab: PropTypes.func.isRequired
+};

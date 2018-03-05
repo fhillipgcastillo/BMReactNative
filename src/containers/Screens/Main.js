@@ -8,26 +8,13 @@ export default class MainScreen extends React.Component {
   static navigationOptions = {
     title: 'Administra Tu Negocio'
   };
-  static defaultProps = {
-    activeTab: 'home'
-  };
-  constructor(props){
-    super(props);
-    this.handleTabSelect = this.handleTabSelect.bind(this);
-  }
-  handleTabSelect = () => {
-    console.log('tab selected');
-  };
+  
   render() {
+    console.log("main screen", this.props);
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <TabsContainer 
-        styles={{marginTop:50,backgroundColor:'black'}}
-          onTabSelect={this.handleTabSelect} 
-          navigate={navigate} 
-          activeTab={this.props.activeTab}
-        />
+        <TabsContainer navigate={navigate}/>
       </View>
     );
   }
@@ -37,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems:'stretch',
     justifyContent: 'center',
   },
 });

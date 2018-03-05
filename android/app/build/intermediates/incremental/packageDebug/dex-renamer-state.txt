@@ -1,4 +1,4 @@
-#Sun Mar 04 16:34:15 VET 2018
+#Mon Mar 05 08:55:51 VET 2018
 base.0=C\:\\Data\\Repositories\\business_management\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Data\\Repositories\\business_management\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
