@@ -1,10 +1,12 @@
 import React from 'react';
 // import {StackNavigator} from 'react-navigation';
 import { StyleSheet, Text, View } from 'react-native';
+import TabsContainer from '~/containers/Navigator/TabsContainer';
 
-class MainScreen extends React.Component {
+
+export default class MainScreen extends React.Component {
   static navigationOptions = {
-    title: 'Main app'
+    title: 'Administra Tu Negocio'
   };
   render() {
     const { navigate } = this.props.navigation;
@@ -13,6 +15,7 @@ class MainScreen extends React.Component {
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <TabsContainer navigate={navigate} />
       </View>
     );
   }
