@@ -1,0 +1,22 @@
+[
+  {
+    "title":"Dashboard",
+    "tabName":"home",
+    "iconName":"home"
+  },
+  {
+    "title":"Inventario",
+    "tabName":"inventory",
+    "iconName":"clipboard"
+  },
+  {
+    "title":"Other",
+    "tabName":"other",
+    "iconName":"user"
+  },
+  {
+    "title":"Config",
+    "tabName":"config",
+    "iconName":"cog"
+  },
+]

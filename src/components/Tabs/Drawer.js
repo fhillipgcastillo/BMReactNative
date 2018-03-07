@@ -3,55 +3,60 @@ import PropTypes from 'prop-types';
 import {View, StyleSheet, Text} from 'react-native';
 import DrawerTab from "./Drawer.Tab";
 
+const DrawerItem = (props) => {
+  return (
+    <DrawerTab 
+      title={props.title}
+      selected={props.activeTab === props.tabName}
+      onPress={()=>{
+        props.onSelectTab(props.tabName);
+        props.close()
+      }}
+      iconName={props.iconName}
+    />
+  )
+};
 
 export default function Drawer (props){
+  /*
+    receive a list of Tabs with:
+      title,
+      tabName,
+      onPressExtraCallback (optional)
+      iconName,
+      Component, (to be rendered when active)
+  */
+  const DrawerItems = [
+    {
+      title:"Dashboard",
+      tabName:"home",
+      iconName:"home",
+      Component: undefined
+    },
+    {
+      title:"Inventario",
+      tabName:"inventory",
+      iconName:"clipboard",
+      Component: undefined
+    },
+    {
+      title:"Other",
+      tabName:"other",
+      iconName:"user",
+      Component: undefined
+    },
+    {
+      title:"Config",
+      tabName:"config",
+      iconName:"cog",
+      Component: undefined
+    },
+  ]
   return (
     <View style={{flex:1}}>
-      <DrawerTab 
-        title={"Dashboard"}
-        selected={props.activeTab === "home"}
-        onPress={()=>{
-          props.onSelectTab("home");
-          props.close()
-        }}
-        iconName="home"
-      />
-      <DrawerTab 
-        title={"Inventario"}
-        selected={props.activeTab === "inventario"}
-        onPress={()=>{
-          props.onSelectTab("inventario");
-          props.close()
-        }}
-        iconName="rocket"
-      />
-      <DrawerTab 
-        title={"Other"}
-        selected={props.activeTab === "other"}
-        onPress={()=>{
-          props.onSelectTab("other");
-          props.close()
-        }}
-        iconName="rocket"
-      />
-      <DrawerTab 
-        title={"Other"}
-        selected={props.activeTab === "other"}
-        onPress={()=>{
-          props.onSelectTab("other");
-          props.close()
-        }}
-        iconName="rocket"
-      />
-      <DrawerTab 
-        title={"Other"}
-        selected={props.activeTab === "other"}
-        onPress={()=>{
-          props.onSelectTab("other");
-          props.close()
-        }}
-        iconName="rocket"
-      />
+      { DrawerItems.map((item, $index)=>{
+        return <DrawerItem key={$index} {...item} {...props} />
+      }) }
     </View>
   )
 };

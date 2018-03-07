@@ -6,9 +6,7 @@ export default class TabsContainer extends Component {
   render(){
     return (
       <Tabs 
-        /*activeTab={this.props.activeTab} 
-        onSelectTab={this.props.onSelectTab} */
-        navigate={this.props.navigate} />
+        {...this.props} />
     )
   }
 };

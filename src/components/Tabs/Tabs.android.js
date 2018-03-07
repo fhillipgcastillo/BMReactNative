@@ -9,11 +9,15 @@ import Drawer from './Drawer';
 import Sample from '~/containers/Sample/Sample';
 import {connect} from 'react-redux';
 import {setActiveTab} from '~/redux/actions/tabs.dispatcher';
+import InventoryContainer from "~/containers/Inventory/InventoryContainer";
+
 
 const ActiveDrawer = (activeTab, props) => {
   switch(activeTab){
     case "home":
       return <Sample navigate={props.navigate} />
+    case "inventory":
+      return <InventoryContainer />
     default:
       return <Text>Another</Text>
   };
