@@ -1,4 +1,3 @@
-import {SET_ACTIVE_TAB} from "./types";
 import {setActiveTab as creators_setActiveTab} from './tabs.creator';
 
 export const setActiveTab = (tab)=>{

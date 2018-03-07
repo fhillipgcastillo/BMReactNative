@@ -8,13 +8,40 @@ export default function Drawer (props){
   return (
     <View style={{flex:1}}>
       <DrawerTab 
-        title={"Home"}
+        title={"Dashboard"}
         selected={props.activeTab === "home"}
         onPress={()=>{
           props.onSelectTab("home");
           props.close()
         }}
         iconName="home"
+      />
+      <DrawerTab 
+        title={"Inventario"}
+        selected={props.activeTab === "inventario"}
+        onPress={()=>{
+          props.onSelectTab("inventario");
+          props.close()
+        }}
+        iconName="rocket"
+      />
+      <DrawerTab 
+        title={"Other"}
+        selected={props.activeTab === "other"}
+        onPress={()=>{
+          props.onSelectTab("other");
+          props.close()
+        }}
+        iconName="rocket"
+      />
+      <DrawerTab 
+        title={"Other"}
+        selected={props.activeTab === "other"}
+        onPress={()=>{
+          props.onSelectTab("other");
+          props.close()
+        }}
+        iconName="rocket"
       />
       <DrawerTab 
         title={"Other"}

@@ -13,9 +13,9 @@ import {setActiveTab} from '~/redux/actions/tabs.dispatcher';
 const ActiveDrawer = (activeTab, props) => {
   switch(activeTab){
     case "home":
-      return <Sample navigate={props.navigate} />/*<HomeContainer openDrawer={openDrawer} navigate={props.navigate} />*/
+      return <Sample navigate={props.navigate} />
     default:
-      return <Text>Another</Text>/*<LeaderboardContainer openDrawer={openDrawer} navigate={props.navigate} />*/ 
+      return <Text>Another</Text>
   };
 };
 

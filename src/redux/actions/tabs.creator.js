@@ -1,3 +1,3 @@
-import {SET_ACTIVE_TAB} from "./types";
+import {Tabs} from "./types";
 
-export const setActiveTab = (newTab) => ({type:SET_ACTIVE_TAB, payload:newTab});
+export const setActiveTab = (newTab) => ({type:Tabs.SET_ACTIVE_TAB, payload:newTab});
