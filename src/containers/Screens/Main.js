@@ -11,15 +11,13 @@ export default class MainScreen extends React.Component {
   };
   
   render() {
-    console.log("main screen", this.props);
     const { navigate } = this.props.navigation;
     return (
       <Provider store={store} >
         <View style={styles.container}>
-          <TabsContainer navigate={navigate}/>
+          <TabsContainer navigate={navigate} />
         </View>
       </Provider>
-      
     );
   }
 }

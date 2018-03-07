@@ -4,6 +4,11 @@ import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors, fontSizes } from '~/styles';
 
+
+// const Icon = (props)=>{
+//   return (<Text style={{minHeight:props.size, minWidth:props.size, backgroundColor:props.color}}></Text>)
+// };
+
 export default function DrawerTab(props){
   const color = props.selected === true ? colors.blue : colors.primary;
   return (

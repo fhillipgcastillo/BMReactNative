@@ -1,8 +1,9 @@
 import {SET_ACTIVE_TAB} from "./types";
-import creators from './tabs.creator';
+import {setActiveTab as creators_setActiveTab} from './tabs.creator';
 
 export const setActiveTab = (tab)=>{
+  console.log("dispatcher tab", tab);
   return (dispatch)=> {
-    dispatch(creators.setActiveTab(tab))
+    dispatch(creators_setActiveTab(tab))
   }
 }

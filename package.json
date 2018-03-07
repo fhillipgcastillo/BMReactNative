@@ -11,7 +11,6 @@
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
-    "native-android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js"
   },
