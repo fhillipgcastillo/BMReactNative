@@ -5,14 +5,12 @@ import DrawerTab from "./Drawer.Tab";
 
 
 export default function Drawer (props){
-  console.log('Drawer', props);
   return (
     <View style={{flex:1}}>
       <DrawerTab 
         title={"Home"}
         selected={props.activeTab === "home"}
         onPress={()=>{
-          console.log('Home pressed', props);
           props.onSelectTab("home");
           props.close()
         }}
@@ -22,7 +20,6 @@ export default function Drawer (props){
         title={"Other"}
         selected={props.activeTab === "other"}
         onPress={()=>{
-          console.log('other pressed', props);
           props.onSelectTab("other");
           props.close()
         }}

@@ -20,19 +20,9 @@ const ActiveDrawer = (activeTab, props) => {
 };
 
 class Tab extends Component{
-  componentDidMount(){
-    const self = this;
-    setTimeout(()=>{console.log("timeout");
-      self.props.activeTab = "other";
-      console.log(new Date());
-    }, 5000);
-  };
   render(){
     const closeDrawer = () => this.drawer.closeDrawer();
     const openDrawer = () => this.drawer.openDrawer();
-    console.log("Tabs", this.props);
-    
-    console.log(new Date());
     
     return (
       <DrawerLayoutAndroid 
@@ -56,7 +46,7 @@ Tab.propTypes = {
   onSelectTab: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state)=>{console.log("mapper", state.Tabs); return state.Tabs};
+const mapStateToProps = (state)=>(state.Tabs);
 
 // const mapDispatchToProps = (dispatch)=> ({onSelectTab: setActiveTab});
 

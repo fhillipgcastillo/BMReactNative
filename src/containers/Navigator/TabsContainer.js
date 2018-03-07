@@ -2,11 +2,8 @@ import React, {PropTypes, Component} from 'react';
 import {View, Text} from 'react-native';
 import Tabs from '~/components/Tabs/Tabs';
 
-
-
 export default class TabsContainer extends Component {
   render(){
-    console.log(this.props);
     return (
       <Tabs 
         /*activeTab={this.props.activeTab} 
