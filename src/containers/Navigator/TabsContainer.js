@@ -1,12 +1,13 @@
 import React, {PropTypes, Component} from 'react';
 import {View, Text} from 'react-native';
-import Tabs from '~/components/Tabs/Tabs';
+import {DrawerNavigator} from 'react-navigation';
+import DashboardScreen from '~/containers/Screens/Dashboard';
+import ProductsScreen from '~/containers/Screens/ProductsScreen';
 
-export default class TabsContainer extends Component {
-  render(){
-    return (
-      <Tabs 
-        {...this.props} />
-    )
-  }
-};
+export default  TabsContainer = DrawerNavigator({
+  Dashboard: {screen: DashboardScreen, name:'Dashboard', headerMode: 'none'},
+  Products: {screen: ProductsScreen, name:'Products'},
+},
+{
+  initialRouteName: 'Dashboard'
+});
