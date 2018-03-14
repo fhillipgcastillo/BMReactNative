@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
 export default class Sample extends Component{
-  static navigationOptions = {
-    title: 'Dashboard Sample'
-  };
+  // static navigationOptions = {
+  //   title: 'Dashboard'
+  // };
   render(){
     return (
       <View >

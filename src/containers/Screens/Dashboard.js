@@ -8,5 +8,5 @@ export default DashboardScreen = StackNavigator({
 },
 {
   initialRouteName: 'Sample',
-  title: 'Sample'
+  navigationOptions: {title: 'Dashboard'}
 });

@@ -8,5 +8,5 @@ export default ProductsScreen = StackNavigator({
 },
 {
   initialRouteName: 'Products',
-  title: 'Product Section'
+  navigationOptions: {title: 'Products'}
 });

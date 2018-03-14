@@ -5,7 +5,7 @@ import DashboardScreen from '~/containers/Screens/Dashboard';
 import ProductsScreen from '~/containers/Screens/ProductsScreen';
 
 export default  TabsContainer = DrawerNavigator({
-  Dashboard: {screen: DashboardScreen, name:'Dashboard', headerMode: 'none'},
+  Dashboard: {screen: DashboardScreen, name:'Dashboard'},
   Products: {screen: ProductsScreen, name:'Products'},
 },
 {
