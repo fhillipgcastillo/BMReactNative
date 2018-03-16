@@ -9,5 +9,5 @@ export default  TabsContainer = DrawerNavigator({
   Products: {screen: ProductsScreen, name:'Products'},
 },
 {
-  initialRouteName: 'Dashboard'
+  initialRouteName: 'Products'
 });
